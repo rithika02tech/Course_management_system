@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Student Course Management</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#2e7d32,#66bb6a);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:30px;
+}
+
+.container{
+width:100%;
+max-width:1100px;
+background:white;
+display:grid;
+grid-template-columns:1fr 1fr;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.left{
+background:#2e7d32;
+color:white;
+padding:60px 40px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.left h1{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.left p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:25px;
+}
+
+.left ul{
+padding-left:20px;
+}
+
+.left ul li{
+margin-bottom:12px;
+}
+
+.right{
+padding:40px;
+overflow-y:auto;
+max-height:90vh;
+}
+
+h2{
+text-align:center;
+color:#2e7d32;
+margin-bottom:20px;
+}
+
+.form-box{
+margin-bottom:40px;
+padding:25px;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+label{
+display:block;
+font-weight:bold;
+margin:12px 0 5px;
+}
+
+input{
+width:100%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:15px;
+}
+
+button{
+width:100%;
+margin-top:20px;
+padding:13px;
+border:none;
+background:#2e7d32;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1b5e20;
+}
+
+p{
+margin-top:12px;
+text-align:center;
+}
+
+a{
+text-decoration:none;
+color:#2e7d32;
+font-weight:bold;
+}
+
+@media(max-width:900px){
+
+.container{
+grid-template-columns:1fr;
+}
+
+.left{
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="left">
+
+<h1>scm</h1>
+
+<p>
+Welcome to the Student Course Management System.
+Access your courses, monitor your progress, and download certificates from one platform.
+</p>
+
+<ul>
+<li>✔ Student Dashboard</li>
+<li>✔ Online Course Enrollment</li>
+<li>✔ Learning Progress Tracking</li>
+<li>✔ Course Certificates</li>
+<li>✔ Admin Management</li>
+</ul>
+
+</div>
+
+<div class="right">
+
+<!-- LOGIN -->
+
+<div class="form-box">
+
+<h2>Student Login</h2>
+
+<form>
+
+<label>Email</label>
+
+<input type="email" placeholder="Enter Email">
+
+<label>Password</label>
+
+<input type="password" placeholder="Enter Password">
+
+<button>Login</button>
+
+<p>
+Forgot Password?
+<a href="#">Reset Here</a>
+</p>
+
+</form>
+
+</div>
+<!-- REGISTER -->
+
+<div class="form-box">
+
+<h2>Create New Account</h2>
+
+<form>
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter Full Name">
+
+<label>Email</label>
+<input type="email" placeholder="Enter Email">
+
+<label>Phone Number</label>
+<input type="tel" placeholder="Enter Phone Number">
+
+<label>Department</label>
+<input type="text" placeholder="Enter Department">
+
+<label>Password</label>
+<input type="password" placeholder="Create Password">
+
+<label>Confirm Password</label>
+<input type="password" placeholder="Confirm Password">
+
+<button>Create Account</button>
+
+</form>
+
+</div>
+
+<!-- FORGOT PASSWORD -->
+
+<div class="form-box">
+
+<h2>Forgot Password</h2>
+
+<form>
+
+<label>Email Address</label>
+
+<input type="email" placeholder="Enter Registered Email">
+
+<button>Send Reset Link</button>
+
+</form>
+
+</div>
+
+<!-- RESET PASSWORD -->
+
+<div class="form-box">
+
+<h2>Reset Password</h2>
+
+<form>
+
+<label>New Password</label>
+
+<input type="password" placeholder="Enter New Password">
+
+<label>Confirm Password</label>
+
+<input type="password" placeholder="Confirm New Password">
+
+<button>Reset Password</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

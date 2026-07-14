@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#f5f7fb;
+}
+
+header{
+background:#2e7d32;
+color:white;
+padding:20px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h2{
+font-size:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:bold;
+}
+
+.banner{
+background:linear-gradient(rgba(46,125,50,.8),rgba(46,125,50,.8)),url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1600");
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+.banner h1{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.banner p{
+font-size:20px;
+}
+
+.dashboard{
+padding:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-bottom:50px;
+}
+
+.card{
+background:white;
+padding:30px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card h2{
+color:#2e7d32;
+font-size:40px;
+margin-bottom:10px;
+}
+
+.section-title{
+text-align:center;
+font-size:35px;
+color:#2e7d32;
+margin:40px 0;
+}
+
+.course-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.course{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.course img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.course-content{
+padding:20px;
+}
+
+.course-content h3{
+color:#2e7d32;
+margin-bottom:10px;
+}
+
+.course-content p{
+line-height:1.6;
+margin-bottom:15px;
+}
+
+.btn{
+display:inline-block;
+background:#2e7d32;
+color:white;
+padding:10px 20px;
+text-decoration:none;
+border-radius:5px;
+}
+
+.progress-table{
+width:100%;
+border-collapse:collapse;
+margin-top:30px;
+background:white;
+}
+
+.progress-table th{
+background:#2e7d32;
+color:white;
+padding:15px;
+}
+
+.progress-table td{
+padding:15px;
+text-align:center;
+border:1px solid #ddd;
+}
+
+.progress{
+background:#ddd;
+height:20px;
+border-radius:20px;
+overflow:hidden;
+}
+
+.bar{
+background:#4caf50;
+height:100%;
+color:white;
+text-align:center;
+line-height:20px;
+}
+
+.certificate{
+margin-top:60px;
+background:white;
+padding:40px;
+border:5px solid #2e7d32;
+text-align:center;
+}
+
+.certificate h1{
+color:#2e7d32;
+font-size:40px;
+margin-bottom:20px;
+}
+
+.certificate h2{
+margin:20px 0;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:60px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+display:block;
+margin:10px 0;
+}
+
+.banner h1{
+font-size:35px;
+}
+
+.dashboard{
+padding:20px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>SCM</h2>
+
+<nav>
+
+<a href="#">Dashboard</a>
+<a href="#">Courses</a>
+<a href="#">Progress</a>
+<a href="#">Certificate</a>
+<a href="index.html">Logout</a>
+
+</nav>
+
+</header>
+
+<section class="banner">
+
+<h1>Welcome, Student</h1>
+
+<p>
+Continue your learning journey and achieve your goals.
+</p>
+
+</section>
+
+<div class="dashboard">
+
+<div class="cards">
+
+<div class="card">
+<h2>12</h2>
+<p>Total Courses</p>
+</div>
+
+<div class="card">
+<h2>7</h2>
+<p>Completed</p>
+</div>
+
+<div class="card">
+<h2>5</h2>
+<p>In Progress</p>
+</div>
+
+<div class="card">
+<h2>3</h2>
+<p>Certificates</p>
+</div>
+
+</div>
+
+<h1 class="section-title">
+Available Courses
+</h1>
+
+<div class="course-grid">
+
+<div class="course">
+
+<img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800">
+
+<div class="course-content">
+
+<h3>Python Programming</h3>
+
+<p>
+Learn Python from basics to advanced with real-world examples.
+</p>
+
+<a href="#" class="btn">Enroll</a>
+
+</div>
+
+</div>
+
+<div class="course">
+
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800">
+
+<div class="course-content">
+
+<h3>Artificial Intelligence</h3>
+
+<p>
+Explore AI, Machine Learning and Deep Learning concepts.
+</p>
+
+<a href="#" class="btn">Enroll</a>
+
+</div>
+
+</div>
+
+<div class="course">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800">
+
+<div class="course-content">
+
+<h3>Web Development</h3>
+
+<p>
+Build responsive websites using HTML, CSS and modern tools.
+</p>
+
+<a href="#" class="btn">Enroll</a>
+
+</div>
+
+</div>
+
+</div>
+<!-- MY COURSES -->
+
+<h1 class="section-title">My Courses</h1>
+
+<table class="progress-table">
+
+<tr>
+<th>Course Name</th>
+<th>Instructor</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Python Programming</td>
+<td>Dr. John Smith</td>
+<td>Completed</td>
+</tr>
+
+<tr>
+<td>Artificial Intelligence</td>
+<td>Prof. David</td>
+<td>In Progress</td>
+</tr>
+
+<tr>
+<td>Web Development</td>
+<td>Ms. Sophia</td>
+<td>Completed</td>
+</tr>
+
+<tr>
+<td>Database Management</td>
+<td>Mr. James</td>
+<td>In Progress</td>
+</tr>
+
+</table>
+
+<!-- PROGRESS -->
+
+<h1 class="section-title">Course Progress</h1>
+
+<table class="progress-table">
+
+<tr>
+<th>Course</th>
+<th>Progress</th>
+</tr>
+
+<tr>
+<td>Python Programming</td>
+<td>
+<div class="progress">
+<div class="bar" style="width:100%;">100%</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>Artificial Intelligence</td>
+<td>
+<div class="progress">
+<div class="bar" style="width:70%;">70%</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>Web Development</td>
+<td>
+<div class="progress">
+<div class="bar" style="width:90%;">90%</div>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>Database Management</td>
+<td>
+<div class="progress">
+<div class="bar" style="width:55%;">55%</div>
+</div>
+</td>
+</tr>
+
+</table>
+
+<!-- CERTIFICATE -->
+
+<h1 class="section-title">Course Certificate</h1>
+
+<div class="certificate">
+
+<h1>CERTIFICATE OF COMPLETION</h1>
+
+<p>This certificate is proudly presented to</p>
+
+<h2>Rithika</h2>
+
+<p>for successfully completing the course</p>
+
+<h2>Artificial Intelligence</h2>
+
+<p>with outstanding performance and dedication.</p>
+
+<br>
+
+<p><strong>Date:</strong> 10 July 2026</p>
+
+<p><strong>Instructor:</strong> Dr. John Smith</p>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>Student Course Management System</h3>
+
+<p>
+© 2026 All Rights Reserved | Designed for Academic Project
+</p>
+
+</footer>
+
+</body>
+</html>

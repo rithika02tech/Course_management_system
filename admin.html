@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#f4f7fc;
+}
+
+header{
+background:#1b5e20;
+color:white;
+padding:20px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h2{
+font-size:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:bold;
+}
+
+.banner{
+background:linear-gradient(rgba(27,94,32,.9),rgba(27,94,32,.9));
+color:white;
+text-align:center;
+padding:60px;
+}
+
+.banner h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.banner p{
+font-size:18px;
+}
+
+.container{
+padding:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-bottom:40px;
+}
+
+.card{
+background:white;
+padding:30px;
+text-align:center;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card h2{
+color:#2e7d32;
+font-size:40px;
+margin-bottom:10px;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+color:#2e7d32;
+margin:40px 0 25px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+table th{
+background:#2e7d32;
+color:white;
+padding:15px;
+}
+
+table td{
+padding:15px;
+border:1px solid #ddd;
+text-align:center;
+}
+
+form{
+background:white;
+padding:30px;
+margin-top:40px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+form label{
+display:block;
+margin-top:15px;
+font-weight:bold;
+}
+
+form input,
+form textarea{
+width:100%;
+padding:12px;
+margin-top:8px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+textarea{
+resize:none;
+height:120px;
+}
+
+button{
+margin-top:20px;
+padding:12px 25px;
+background:#2e7d32;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#1b5e20;
+}
+
+footer{
+margin-top:50px;
+background:#1b5e20;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+display:block;
+margin:10px 0;
+}
+
+.container{
+padding:20px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>SCM Admin</h2>
+
+<nav>
+
+<a href="#">Dashboard</a>
+<a href="#">Students</a>
+<a href="#">Courses</a>
+<a href="#">Reports</a>
+<a href="index.html">Logout</a>
+
+</nav>
+
+</header>
+
+<section class="banner">
+
+<h1>Administrator Dashboard</h1>
+
+<p>Manage students, courses and learning activities.</p>
+
+</section>
+
+<div class="container">
+
+<div class="cards">
+
+<div class="card">
+<h2>520</h2>
+<p>Total Students</p>
+</div>
+
+<div class="card">
+<h2>45</h2>
+<p>Total Courses</p>
+</div>
+
+<div class="card">
+<h2>30</h2>
+<p>Faculty Members</p>
+</div>
+
+<div class="card">
+<h2>420</h2>
+<p>Certificates Issued</p>
+</div>
+
+</div>
+
+<h1 class="section-title">Student Details</h1>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Department</th>
+<th>Email</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Rithika</td>
+<td>B.Sc AI</td>
+<td>rithika@email.com</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Rahul</td>
+<td>BCA</td>
+<td>rahul@email.com</td>
+<td>Active</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>Priya</td>
+<td>B.Sc CS</td>
+<td>priya@email.com</td>
+<td>Completed</td>
+</tr>
+
+<tr>
+<td>104</td>
+<td>Arun</td>
+<td>B.Com</td>
+<td>arun@email.com</td>
+<td>Active</td>
+</tr>
+
+</table>
+<!-- COURSE MANAGEMENT -->
+
+<h1 class="section-title">Course Management</h1>
+
+<table>
+
+<tr>
+<th>Course ID</th>
+<th>Course Name</th>
+<th>Instructor</th>
+<th>Duration</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>C101</td>
+<td>Artificial Intelligence</td>
+<td>Dr. John Smith</td>
+<td>12 Weeks</td>
+<td>Available</td>
+</tr>
+
+<tr>
+<td>C102</td>
+<td>Python Programming</td>
+<td>Prof. David</td>
+<td>10 Weeks</td>
+<td>Available</td>
+</tr>
+
+<tr>
+<td>C103</td>
+<td>Web Development</td>
+<td>Ms. Sophia</td>
+<td>8 Weeks</td>
+<td>Available</td>
+</tr>
+
+<tr>
+<td>C104</td>
+<td>Database Management</td>
+<td>Mr. James</td>
+<td>10 Weeks</td>
+<td>Available</td>
+</tr>
+
+</table>
+
+<!-- ADD COURSE -->
+
+<h1 class="section-title">Add New Course</h1>
+
+<form>
+
+<label>Course Name</label>
+<input type="text" placeholder="Enter Course Name">
+
+<label>Instructor Name</label>
+<input type="text" placeholder="Enter Instructor Name">
+
+<label>Course Duration</label>
+<input type="text" placeholder="Example: 12 Weeks">
+
+<label>Course Description</label>
+<textarea placeholder="Enter Course Description"></textarea>
+
+<button type="submit">Add Course</button>
+
+</form>
+
+<!-- FACULTY DETAILS -->
+
+<h1 class="section-title">Faculty Details</h1>
+
+<table>
+
+<tr>
+<th>Faculty ID</th>
+<th>Name</th>
+<th>Department</th>
+<th>Email</th>
+</tr>
+
+<tr>
+<td>F101</td>
+<td>Dr. John Smith</td>
+<td>Artificial Intelligence</td>
+<td>john@college.edu</td>
+</tr>
+
+<tr>
+<td>F102</td>
+<td>Prof. David</td>
+<td>Computer Science</td>
+<td>david@college.edu</td>
+</tr>
+
+<tr>
+<td>F103</td>
+<td>Ms. Sophia</td>
+<td>Web Development</td>
+<td>sophia@college.edu</td>
+</tr>
+
+<tr>
+<td>F104</td>
+<td>Mr. James</td>
+<td>Database Management</td>
+<td>james@college.edu</td>
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+
+<h2>Student Course Management System</h2>
+
+<p>
+Admin Panel | College Management Portal
+</p>
+
+<p>
+© 2026 All Rights Reserved
+</p>
+
+</footer>
+
+</body>
+</html>
